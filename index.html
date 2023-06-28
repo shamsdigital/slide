@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" />
+</head>
+
+<body>
+
+    <section class="card-parent">
+        <div class="card">
+            <h2 class="lorem-ipsum-is" data-animate-on-scroll>
+                Sales AI helps Rohrman convert more leads
+            </h2>
+            <div class="lorem-ipsum-is-simply-dummy-te-parent" data-animate-on-scroll>
+                <h3 class="lorem-ipsum-is-container">
+                    <p class="blank-line">
+                        Rohrman's SalesAl, nicknamed Megan, enables the sales
+                        team to focus on closing deals and nurturing low-funnel
+                        shoppers. That's because Megan takes care of everything
+                        else - from after-hours lead handling to long-term follow up
+                        and even appointment scheduling. SalesAl ensures that Rohrman responds to every internet
+                        lead, delivering personalized replies via SMS text and email while consistently following up to ensure that shoppers
+ have 
+everything they need to find the perfect vehicle. The
+ best
+part? Megan works 24/7 so the sales team never has to
+miss another opportunity,
+                    </p>
+                    <p class="blank-line">&nbsp;</p>
+                    <p class="blank-line">
+                        Remaining essentially unchanged. It was popularised in the 1960s
+                        with the release of Letraset sheets containing Lorem Ipsum.
+                    </p>
+                    <p class="blank-line">&nbsp;</p>
+                    <p class="blank-line">
+                        Passages, and more recently with desktop publishing software like
+                        Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </h3>
+                
+                    <div class="rectangle-parent">
+                        <div class="frame-child"></div>
+                        <div class="lorem-ipsum-is-container1">
+                            <img src="Bob_Image2.jpg" width="506" height="514" >
+                            <p class="blank-line">
+                                After just 30 days with Sales Al<br>the Rohrman team 
+                                saw 43% a increase<br>in showroom appointments set</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+        var observer = new IntersectionObserver(
+            (entries) => {
+                for (const entry of entries) {
+                    if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                        const targetElement = entry.target;
+                        targetElement.classList.add("animate");
+                        observer.unobserve(targetElement);
+                    }
+                }
+            },
+            {
+                threshold: 0.15,
+            }
+        );
+
+        for (let i = 0; i < scrollAnimElements.length; i++) {
+            observer.observe(scrollAnimElements[i]);
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
